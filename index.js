@@ -89,7 +89,6 @@ fetch('projects.php')
 fetch('json/job_history.json')
     .then(response => response.json())
     .then(jobHistoryData => {
-        console.log(jobHistoryData);
         let jobList = document.getElementById('jobList');
 
         // Loop through the JSON data and create the HTML elements for each item
@@ -118,11 +117,8 @@ fetch('json/job_history.json')
     });  
 
 window.onload = function() {
-    console.log('window loaded');
         fixedButton = document.getElementById('fixedButton');
-        console.log(fixedButton);
         fixedButton.addEventListener('click', function() {
-            console.log('clicked');
             scrollToContactForm();
         });
 

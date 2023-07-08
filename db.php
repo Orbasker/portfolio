@@ -15,7 +15,11 @@ function excecute_query($query){
         die("Query failed: " . mysqli_error($connection));
     }
     
-    $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    $result = json_encode($result);
+    $emparray = array();
+    while($row =mysqli_fetch_assoc($result))
+    {
+        $emparray[] = $row;
+    }
+    $result = json_encode($emparray);
     return $result;
 }

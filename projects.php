@@ -9,7 +9,7 @@ foreach($resultArray as $row){
     if (!empty($row['technology_used'])) {
         $row['technology_used'] = explode(",", $row['technology_used']);
     } else {
-        $row['technology_used'] = array(); // or any default value you prefer
+        $row['technology_used'] = array(); 
     }
 }
 
